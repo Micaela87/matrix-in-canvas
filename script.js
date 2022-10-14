@@ -1,9 +1,11 @@
 function drawCanvasGridMatrix(gridMatrix) {
+    let cols = gridMatrix[0].length;
+    let rows = gridMatrix.length;
     let padding = 2; // padding
     let originX = 0; // starting X point in canvas
     let originY = 0; // starting Y point in canvas
-    let width = (this.gridIcon.nativeElement.width - (2 * padding)) / this.videoWallLayout.gridColumns; // standard cell width
-    let height = (this.gridIcon.nativeElement.height - (2 * padding)) / this.videoWallLayout.gridRows; // standerd cell height
+    let width = (canvas.width - (2 * padding)) / cols; // standard cell width
+    let height = (canvas.height - (2 * padding)) / rows; // standerd cell height
 
     this.ctx.beginPath();
 
